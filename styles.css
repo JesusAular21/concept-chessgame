@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  background-image: url(chess2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Tangerine', cursive;
+}
+
+.container{
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
+
+.div{
+  display: flex;
+}
+
+ul{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+li{
+  list-style: none;
+  display: grid;
+  place-items: center;
+  font-size: 0;
+}
+
+
+.box{
+  margin: .5px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+
+
+h1{
+  margin: 20px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+#tog{
+  margin: 20px 0px;
+  font-size: 1.7rem;
+  text-align: left;
+  background-color: #FFF;
+  color: #000;
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#reset-btn{
+  background: #4b3621;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.7rem;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+ .btn-1{
+  position: relative;
+  overflow:hidden;
+}
+ .btn-1:before{
+  content:'';
+  display:block;
+  border:1px solid #000;
+  width:calc(100% - 2px);
+  height:calc(100% - 2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ .btn-1 span:before,
+ .btn-1 span:after{
+  content:'';
+  display:block;
+  width: 10px;
+  height: 10px;
+  border-radius:6px;
+  border:1px solid #000000;
+  background-color:#000000;
+  position: absolute;
+  transition:.4s;
+}
+ .btn-1 .deco_top:before{
+  top: -6px;
+  left: -6px;
+}
+ .btn-1 .deco_top:after{
+  top: -6px;
+  right: -6px;
+}
+ .btn-1 .deco_bottom:before{
+  bottom: -6px;
+  left: -6px;
+}
+ .btn-1 .deco_bottom:after{
+  bottom: -6px;
+  right: -6px;
+}
+ .btn-1:hover{
+  background-color:#000;
+  color:#fff;
+}
+ .btn-1:hover span:before,
+ .btn-1:hover span:after{
+  width: 12px;
+  height: 12px;
+}
+
+.all-img{
+  position: relative;
+  width: 40px;
+  bottom: 5px;
+}
+
+.all-pawn{
+  transform: scale(.7);
+}
+
+.authcont{
+  width: 100vw;
+}
+
+.author{
+  float: right;
+  margin-right: 50px;
+}
+
+@media (max-width:650px) {
+  .box{
+    width: 11vw;
+    height: 11vw;
+  }
+
+  .all-img{
+    width: 7vw;
+  }
+
+  #tog{
+    margin: 30px 0px;
+    font-size: 30px;
+  }
+
+  #reset-btn{
+    font-size: 30px;
+  }
+
+  h1{
+    font-size: 50px;
+  }
+  
+}
+
+@media (max-width:400px) {
+  h1{
+    font-size: 50px;
+  }
+
+  #tog{
+    margin: 30px 0px;
+    font-size: 30px;
+  }
+
+  #reset-btn{
+    font-size: 30px;
+  }
+}
